@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="lightBox">
+      <div class="lightBoxContainer">
+        <div
+          class="lBarrowContainer"
+          style="right: 10px"
+          onclick="LBsideSlide(1)"
+        >
+          <img src="./images/icon-next.svg" alt="next" />
+        </div>
+        <div
+          class="lBarrowContainer"
+          style="left: 10px"
+          onclick="LBsideSlide(-1)"
+        >
+          <img src="./images/icon-previous.svg" alt="previous" />
+        </div>
+        <img src="./images/icon-close.svg" alt="close" class="lBcloseIcon" />
+        <div class="lightBoxProductImages">
+          <img src="./images/image-product-1.jpg" class="lBfullProductImage" />
+          <img
+            src="./images/image-product-2.jpg"
+            class="lBfullProductImage overflowImage"
+          />
+          <img
+            src="./images/image-product-3.jpg"
+            class="lBfullProductImage overflowImage"
+          />
+          <img
+            src="./images/image-product-4.jpg"
+            class="lBfullProductImage overflowImage"
+          />
+        </div>
+        <div
+          class="thumbs"
+          style="padding-top: 20px; justify-content: space-evenly"
+        >
+          <div class="thumb">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="1"
+              onclick="lBchangeFunc(this)"
+            />
+          </div>
+          <div class="thumb">
+            <img
+              src="./images/image-product-2.jpg"
+              alt="2"
+              onclick="lBchangeFunc(this)"
+            />
+          </div>
+          <div class="thumb">
+            <img
+              src="./images/image-product-3.jpg"
+              alt="3"
+              onclick="lBchangeFunc(this)"
+            />
+          </div>
+          <div class="thumb">
+            <img
+              src="./images/image-product-4.jpg"
+              alt="4"
+              onclick="lBchangeFunc(this)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Navbar Start -->
+      <div class="navbar">
+        <div class="wrapper">
+          <div class="left">
+            <div class="toggler">
+              <img
+                class="menuIcon"
+                src="./images/icon-menu.svg"
+                alt="menu"
+                style="width: 15px"
+              />
+            </div>
+            <img src="./images/logo.svg" alt="logo" class="logoIcon" />
+            <div class="links">
+              <img
+                src="./images/icon-close.svg"
+                alt="close"
+                style="width: 15px; margin-left: 25px; margin-bottom: 25px"
+                class="closeIcon"
+              />
+              <a href="#">Collections</a>
+              <a href="#">Men</a>
+              <a href="#">Women</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+          <div class="right">
+            <div class="cart">
+              <div class="cartIconContainer">
+                <img src="./images/icon-cart.svg" alt="cart" class="cartIcon" />
+                <span class="cartBadge"></span>
+              </div>
+              <div class="cartInfoContainer">
+                <h5 class="cartHeaderText">Cart</h5>
+                <div class="cartProducts">
+                  <div class="cartTextContainer">
+                    <p class="emptyText">Your cart is empty.</p>
+                  </div>
+                  <div class="singleProductContainer">
+                    <div class="singleProduct">
+                      <img
+                        src="./images/image-product-1-thumbnail.jpg"
+                        alt="product"
+                        class="cartProductImage"
+                      />
+                      <div class="cartProductInfo">
+                        <p class="cartProductName">
+                          Fall Limited Edition Sneakers
+                        </p>
+                        <div class="cartProductPriceDetails">
+                          <p class="costDetail"></p>
+                          <h6 class="totalCost"></h6>
+                        </div>
+                      </div>
+                      <img
+                        src="./images/icon-delete.svg"
+                        alt="delete a product"
+                        class="deleteIcon"
+                      />
+                    </div>
+
+                    <button class="checkoutButton">Checkout</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="profileAvatar"
+              src="./images/image-avatar.png"
+              alt="profile"
+              style="width: 35px; margin-left: 20px"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Navbar End -->
+
+      <div class="productContainer">
+        <div class="images">
+          <div class="product-image">
+            <div class="arrowContainer" id="right" onclick="sideSlide(1)">
+              <img src="./images/icon-next.svg" alt="next" />
+            </div>
+            <div class="arrowContainer" id="left">
+              <img
+                src="./images/icon-previous.svg"
+                alt="previous"
+                onclick="sideSlide(-1)"
+              />
+            </div>
+            <div class="productImages">
+              <img
+                src="./images/image-product-1.jpg"
+                class="fullProductImage"
+              />
+              <img
+                src="./images/image-product-2.jpg"
+                class="fullProductImage overflowImage"
+              />
+              <img
+                src="./images/image-product-3.jpg"
+                class="fullProductImage overflowImage"
+              />
+              <img
+                src="./images/image-product-4.jpg"
+                class="fullProductImage overflowImage"
+              />
+            </div>
+          </div>
+          <div class="thumbs">
+            <div class="thumb">
+              <img
+                src="./images/image-product-1.jpg"
+                alt="1"
+                onclick="changeFunc(this)"
+              />
+            </div>
+            <div class="thumb">
+              <img
+                src="./images/image-product-2.jpg"
+                alt="2"
+                onclick="changeFunc(this)"
+              />
+            </div>
+            <div class="thumb">
+              <img
+                src="./images/image-product-3.jpg"
+                alt="3"
+                onclick="changeFunc(this)"
+              />
+            </div>
+            <div class="thumb">
+              <img
+                src="./images/image-product-4.jpg"
+                alt="4"
+                onclick="changeFunc(this)"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="infoContainer">
+          <h3 class="sellerName">SNEAKER COMPANY</h3>
+          <h1 class="productName">Fall Limited Edition Sneakers</h1>
+          <p class="desc">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="priceDetails">
+            <div>
+              <h2 class="currentPrice">$125.00</h2>
+              <span class="discountBadge">50%</span>
+            </div>
+            <p class="previousPrice"><s>$250.00</s></p>
+          </div>
+          <div class="buttons">
+            <div class="productAmountContainer">
+              <img
+                src="./images/icon-minus.svg"
+                alt="minus"
+                class="minusIcon"
+              />
+              <p class="productAmount">0</p>
+              <img src="./images/icon-plus.svg" alt="plus" class="plusIcon" />
+            </div>
+            <button class="addButton">
+              <span>
+                <img src="./images/icon-cart.svg " style="margin-top: 3px" />
+              </span>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js "></script>
+  </body>
+</html>
